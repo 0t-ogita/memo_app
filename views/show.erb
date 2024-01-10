@@ -1,0 +1,21 @@
+<div class=contents_margin>
+  <h2>タイトル</h2>
+  <div class=text>
+    <p>
+      <%= CGI.escapeHTML(@title) %>
+    </p>
+  </div>
+</div>
+<div class=contents_margin>
+  <h2>内容</h2>
+  <div class=text>
+    <p>
+      <%= CGI.escapeHTML(@content) %>
+    </p>
+  </div>
+</div>
+<div class=button>
+  <form action="/memos/<%= params[:id] %>/editings" method="get"> <input type="submit" value="編集"> </form>
+  <form action="/memos/<%= params[:id] %>" method="post"> <input type="hidden" name="_method" value="delete"> <input type="submit" value="削除"> </form>
+</div>
+<div class=go_home> <a href="/memos">メモ一覧に戻る</a> </div>

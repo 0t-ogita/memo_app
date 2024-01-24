@@ -1,0 +1,7 @@
+<form action="/memos/<%= params[:id] %>" method="post">
+  <div class="contents_margin">
+    <h2>タイトル</h2> <input type="text" id="title" name="title" value="<%= CGI.escapeHTML(@title) %>"> </div>
+  <div class="contents_margin">
+    <h2>内容</h2> <textarea id="content" name="content"> <%= CGI.escapeHTML(@content) %> </textarea> </div>
+  <div> <input type="hidden" name="_method" value="patch"> <input type="submit" value="保存"> </div>
+</form>

@@ -1,5 +1,5 @@
 require 'cgi'
-require 'pg' 
+require 'pg'
 require 'sinatra'
 require 'sinatra/reloader'
 
@@ -8,7 +8,7 @@ def get_memos(file_path)
 end
 
 def conn
-  @conn ||= PG.connect( dbname: 'postgres', user: 'postgres', password: 'ogiogi' )
+  @conn ||= PG.connect(dbname: 'postgres', user: 'postgres', password: 'ogiogi')
 end
 
 def read_memo(id)

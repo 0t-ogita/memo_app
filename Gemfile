@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "pg"
+gem 'pg'
 gem 'puma'
 gem 'redcarpet'
 gem 'sinatra', '~> 3.1'

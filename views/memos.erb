@@ -1,10 +1,10 @@
 <div> <a href="/memos/newies">メモを作成</a> </div>
 <ul>
-  <% @memos.each do |id, post| %>
+  <% @memos.each do |memo| %>
     <li>
-      <a href="/memos/<%= id %>">
-        <%= CGI.escapeHTML(post["title"]) %>
+      <a href="/memos/<%= memo["id"] %>">
+        <%= CGI.escapeHTML(memo["title"]) %>
       </a>
     </li>
-    <% end %>
+  <% end %>
 </ul>
